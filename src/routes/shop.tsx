@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { books, categories, type Category } from "@/data/books";
 import { BookCard } from "@/components/BookCard";
+import { useI18n } from "@/context/I18nContext";
 
 type ShopSearch = { q?: string; category?: Category };
 
@@ -24,9 +25,14 @@ export const Route = createFileRoute("/shop")({
 function Shop() {
   const { q, category } = Route.useSearch();
   const navigate = Route.useNavigate();
+  const { t, lang } = useI18n();
 
   const filtered = books.filter((b) => {
-    const matchesQ = !q || (b.title + " " + b.author).toLowerCase().includes(q.toLowerCase());
+    const matchesQ =
+      !q ||
+      `${b.title.en} ${b.title.ar} ${b.author.en} ${b.author.ar}`
+        .toLowerCase()
+        .includes(q.toLowerCase());
     const matchesCat = !category || b.category === category;
     return matchesQ && matchesCat;
   });
@@ -34,9 +40,9 @@ function Shop() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-12">
       <div className="mb-8">
-        <h1 className="font-serif text-3xl md:text-4xl">The Catalog</h1>
+        <h1 className="font-serif text-3xl md:text-4xl">{t("shop.title")}</h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          {filtered.length} {filtered.length === 1 ? "book" : "books"} found
+          {filtered.length} {filtered.length === 1 ? t("shop.count.one") : t("shop.count.many")}
         </p>
       </div>
 
@@ -49,20 +55,20 @@ function Shop() {
               !category ? "border-primary bg-primary text-primary-foreground" : "border-border hover:bg-secondary"
             }`}
           >
-            All
+            {t("shop.all")}
           </Link>
           {categories.map((c) => (
             <Link
-              key={c.name}
+              key={c}
               to="/shop"
-              search={{ q, category: c.name }}
+              search={{ q, category: c }}
               className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
-                category === c.name
+                category === c
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border hover:bg-secondary"
               }`}
             >
-              {c.name}
+              {t(`cat.${c}` as const)}
             </Link>
           ))}
         </div>
@@ -80,7 +86,8 @@ function Shop() {
           <input
             name="q"
             defaultValue={q ?? ""}
-            placeholder="Search…"
+            placeholder={t("shop.search.placeholder")}
+            lang={lang}
             className="w-full bg-transparent py-2 text-sm outline-none"
           />
         </form>
@@ -88,8 +95,8 @@ function Shop() {
 
       {filtered.length === 0 ? (
         <div className="rounded-lg border border-dashed border-border bg-card/40 p-16 text-center">
-          <p className="font-serif text-xl">No books match your search</p>
-          <p className="mt-2 text-sm text-muted-foreground">Try a different keyword or clear filters.</p>
+          <p className="font-serif text-xl">{t("shop.empty.title")}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t("shop.empty.sub")}</p>
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
