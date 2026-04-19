@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import type { Book } from "@/data/books";
+import { useI18n } from "@/context/I18nContext";
 
 export function BookCard({ book }: { book: Book }) {
+  const { lang } = useI18n();
   return (
     <Link
       to="/book/$bookId"
@@ -11,7 +13,7 @@ export function BookCard({ book }: { book: Book }) {
       <div className="overflow-hidden rounded-md bg-secondary/50 shadow-[var(--shadow-book)] transition-transform duration-500 group-hover:-translate-y-1">
         <img
           src={book.cover}
-          alt={`Cover of ${book.title}`}
+          alt={book.title[lang]}
           loading="lazy"
           width={768}
           height={1024}
@@ -20,8 +22,8 @@ export function BookCard({ book }: { book: Book }) {
       </div>
       <div className="mt-3 flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <h3 className="truncate font-serif text-base font-medium leading-tight">{book.title}</h3>
-          <p className="truncate text-xs text-muted-foreground">{book.author}</p>
+          <h3 className="truncate font-serif text-base font-medium leading-tight">{book.title[lang]}</h3>
+          <p className="truncate text-xs text-muted-foreground">{book.author[lang]}</p>
         </div>
         <span className="shrink-0 text-sm font-medium text-primary">${book.price.toFixed(2)}</span>
       </div>
