@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
         <div className="text-sm">
           <h4 className="mb-2 font-medium">{t("footer.contact")}</h4>
-          <p className="text-muted-foreground">hello@tranquilpages.shop</p>
+          <p className="text-muted-foreground">books.shop@httm.com</p>
         </div>
       </div>
       <div className="border-t border-border/60 py-4 text-center text-xs text-muted-foreground">
