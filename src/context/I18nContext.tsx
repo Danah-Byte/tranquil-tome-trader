@@ -15,7 +15,7 @@ const dict: Dict = {
 
   // Home
   "home.eyebrow": { en: "A quiet bookshop", ar: "مكتبة هادئة" },
-  "home.title": { en: "Stories worth slowing down for.", ar: "قصص تستحق أن تُقرأ على مهل." },
+  "home.title": { en: "Books worth slowing down for.", ar: "قصص تستحق أن تُقرأ على مهل." },
   "home.subtitle": {
     en: "Hand-picked fiction, science, and history — wrapped, signed, and posted from a small shop in Skaka.",
     ar: "روايات وعلوم وتاريخ مختارة بعناية — تُغلَّف وتُوقَّع وتُرسَل من مكتبة صغيرة في سكاكا.",

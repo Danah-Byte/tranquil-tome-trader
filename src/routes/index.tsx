@@ -45,7 +45,7 @@ function Home() {
         <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
           <div className="max-w-xl">
             <p className="mb-4 text-xs uppercase tracking-[0.25em] text-accent">{t("home.eyebrow")}</p>
-            <h1 className="font-serif text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{t("home.title")}</h1>
+            <h1 className="font-serif text-4xl leading-[1.05] sm:text-5xl md:text-6xl text-slate-950">{t("home.title")}</h1>
             <p className="mt-5 text-base text-muted-foreground md:text-lg">{t("home.subtitle")}</p>
 
             <form onSubmit={onSearch} className="mt-8 flex max-w-md items-center gap-2 rounded-full border border-border bg-card p-1.5 shadow-[var(--shadow-soft)]">
