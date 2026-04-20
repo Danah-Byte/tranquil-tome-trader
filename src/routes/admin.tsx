@@ -21,10 +21,10 @@ export const Route = createFileRoute("/admin")({
 });
 
 const mockOrders = [
-  { id: "ORD-1042", customer: { en: "Sara A.", ar: "سارة ع." }, total: 285, status: "shipped" as const, date: "2025-04-12" },
-  { id: "ORD-1041", customer: { en: "Omar K.", ar: "عمر ك." }, total: 110, status: "processing" as const, date: "2025-04-12" },
-  { id: "ORD-1040", customer: { en: "Lina H.", ar: "لينا هـ." }, total: 195, status: "delivered" as const, date: "2025-04-10" },
-  { id: "ORD-1039", customer: { en: "Yusuf M.", ar: "يوسف م." }, total: 78, status: "delivered" as const, date: "2025-04-09" },
+  { id: "ORD-1042", customer: { en: "Sara A.", ar: "سارة ع." }, total: 285, status: "shipped" as const, date: "2026-04-29" },
+  { id: "ORD-1041", customer: { en: "Omar K.", ar: "عمر ك." }, total: 110, status: "processing" as const, date: "2026-05-1" },
+  { id: "ORD-1040", customer: { en: "Lina H.", ar: "لينا هـ." }, total: 195, status: "delivered" as const, date: "2026-04-9" },
+  { id: "ORD-1039", customer: { en: "Yusuf M.", ar: "يوسف م." }, total: 78, status: "delivered" as const, date: "2026-03-27" },
 ];
 
 function Admin() {
