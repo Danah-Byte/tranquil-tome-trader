@@ -1,4 +1,4 @@
-import r1 from "@/assets/book-r1.jpg";
+import r1 from "@/assets/book-r1.webp";
 import r2 from "@/assets/book-r2.jpg";
 import r3 from "@/assets/book-r3.jpg";
 import r4 from "@/assets/book-r4.jpg";
@@ -105,7 +105,7 @@ export const books: Book[] = [
   // ── History (Andalus, Abbasid, Ancient Egypt) ─────────────────────
   {
     id: "6",
-    title: { en: "Andalusia: History of the Lost Paradise", ar: "الأندلس: تاريخ الفردوس المفقود" },
+    title: { en: "Andalusia: History of the Lost Paradise", ar: "الأندلس" },
     author: { en: "Raghib al-Sirjani", ar: "راغب السرجاني" },
     description: {
       en: "Eight centuries of Muslim Spain — from the conquest to the fall of Granada — told with rigour and feeling.",
@@ -118,7 +118,7 @@ export const books: Book[] = [
   {
     id: "7",
     title: { en: "The Abbasid Caliphate", ar: "الدولة العباسية" },
-    author: { en: "Muhammad Suhail Taqush", ar: "محمد سهيل طقّوش" },
+    author: { en: "Muhammad Suhail Taqush", ar: "محمد الخضري" },
     description: {
       en: "The rise, golden age, and decline of the Abbasid state — politics, society, and the great translation movement.",
       ar: "نشأة الدولة العباسية وعصرها الذهبي وأفولها — السياسة والمجتمع وحركة الترجمة الكبرى.",
@@ -142,7 +142,7 @@ export const books: Book[] = [
   {
     id: "9",
     title: { en: "Harun al-Rashid", ar: "هارون الرشيد" },
-    author: { en: "Shawqi Abu Khalil", ar: "شوقي أبو خليل" },
+    author: { en: "Shawqi Abu Khalil", ar: "أحمد امين" },
     description: {
       en: "A biography of the most famous Abbasid caliph — diplomat, patron of scholars, and figure of legend.",
       ar: "سيرة أشهر الخلفاء العباسيين — الدبلوماسي وراعي العلماء وصاحب الحكايات الخالدة.",
@@ -154,7 +154,7 @@ export const books: Book[] = [
   {
     id: "10",
     title: { en: "Pharaonic Egypt", ar: "مصر الفرعونية" },
-    author: { en: "Selim Hassan", ar: "سليم حسن" },
+    author: { en: "Selim Hassan", ar: "جمال هدية" },
     description: {
       en: "From the Old Kingdom to the New — gods, dynasties, and daily life along the Nile, by Egypt's pioneering Egyptologist.",
       ar: "من الدولة القديمة إلى الحديثة — الآلهة والأسر والحياة اليومية على ضفاف النيل، بقلم رائد علم المصريات.",
@@ -177,7 +177,7 @@ export const books: Book[] = [
   },
   {
     id: "12",
-    title: { en: "Cleopatra: The Last Queen", ar: "كليوباترا: آخر ملكات مصر" },
+    title: { en: "Cleopatra: The Last Queen", ar: "الحضارة المصرية" },
     author: { en: "Hussein Fawzi", ar: "حسين فوزي" },
     description: {
       en: "A nuanced portrait of Egypt's most famous queen, beyond the Roman myth.",
@@ -190,7 +190,7 @@ export const books: Book[] = [
   {
     id: "13",
     title: { en: "Saladin Al-Ayyubi", ar: "صلاح الدين الأيوبي" },
-    author: { en: "Abdullah Allan", ar: "عبد الله علاّن" },
+    author: { en: "Abdullah Allan", ar: "علي محمد الصلابي" },
     description: {
       en: "The unifier of the Muslim east, the liberator of Jerusalem — a leader of faith, strategy, and mercy.",
       ar: "موحّد المشرق الإسلامي ومحرّر القدس — قائد جمع الإيمان والاستراتيجية والرحمة.",
@@ -203,8 +203,8 @@ export const books: Book[] = [
   // ── Novels (Fantasy & Sci-Fi only) ────────────────────────────────
   {
     id: "14",
-    title: { en: "Sword of the Desert", ar: "سيف الصحراء" },
-    author: { en: "Yara Al-Sayed", ar: "يارا السيّد" },
+    title: { en: "Sword of the Desert", ar: "الصحراء" },
+    author: { en: "Yara Al-Sayed", ar: "جهاد الرجبي" },
     description: {
       en: "A young Bedouin girl uncovers a sword that whispers to the wind — and to the empires that hunt for it.",
       ar: "فتاة بدوية تكتشف سيفًا يهمس للريح — وللإمبراطوريات التي تطارده.",
@@ -227,8 +227,8 @@ export const books: Book[] = [
   },
   {
     id: "16",
-    title: { en: "Jinn of the Sands", ar: "جن الرمال" },
-    author: { en: "Hassan Rahimi", ar: "حسن رحيمي" },
+    title: { en: "Jinn of the Sands", ar: "الرمز المفقود" },
+    author: { en: "Hassan Rahimi", ar: "دان براون" },
     description: {
       en: "A caravan vanishes in the Empty Quarter. A scholar of the unseen sets out to find what took it.",
       ar: "قافلة تختفي في الربع الخالي، فيخرج عالم بالغيب باحثًا عمّا ابتلعها.",
@@ -251,8 +251,8 @@ export const books: Book[] = [
   },
   {
     id: "18",
-    title: { en: "Dragon of the Peninsula", ar: "تنين الجزيرة" },
-    author: { en: "Tariq Al-Ahmar", ar: "طارق الأحمر" },
+    title: { en: "Dragon of the Peninsula", ar: "تراب الماس" },
+    author: { en: "Tariq Al-Ahmar", ar: "أحمد مراد" },
     description: {
       en: "An epic of dragons, towers, and a forgotten kingdom buried beneath the sands of Arabia.",
       ar: "ملحمة عن التنانين والأبراج ومملكة منسيّة مدفونة تحت رمال الجزيرة.",
