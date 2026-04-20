@@ -117,7 +117,7 @@ const dict: Dict = {
   "auth.admin.password": { en: "Password", ar: "كلمة المرور" },
   "auth.admin.cta": { en: "Sign in to dashboard", ar: "الدخول إلى لوحة التحكم" },
   "auth.admin.error": { en: "Invalid username or password.", ar: "اسم المستخدم أو كلمة المرور غير صحيحة." },
-  "auth.admin.hint": { en: "Demo credentials: admin / tranquil2025", ar: "بيانات تجريبية: admin / tranquil2025" },
+  "auth.admin.hint": { en: "\n", ar: "\n" },
   "auth.admin.logout": { en: "Sign out", ar: "تسجيل الخروج" },
   "admin.guard.title": { en: "Admin access required", ar: "يلزم وصول الإدارة" },
   "admin.guard.sub": { en: "Please sign in with manager credentials to continue.", ar: "الرجاء تسجيل الدخول ببيانات المدير للمتابعة." },
