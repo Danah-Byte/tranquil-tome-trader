@@ -28,7 +28,7 @@ function CartPage() {
     );
   }
 
-  const shipping = total > 50 ? 0 : 4.5;
+  const shipping = total > 200 ? 0 : 25;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
@@ -45,7 +45,7 @@ function CartPage() {
                     <h3 className="font-serif text-lg leading-tight">{book.title[lang]}</h3>
                     <p className="text-xs text-muted-foreground">{book.author[lang]}</p>
                   </div>
-                  <p className="font-medium text-primary">${(book.price * qty).toFixed(2)}</p>
+                  <p className="font-medium text-primary">SAR {(book.price * qty).toFixed(2)}</p>
                 </div>
                 <div className="mt-auto flex items-center justify-between">
                   <div className="inline-flex items-center rounded-md border border-border">
@@ -80,10 +80,10 @@ function CartPage() {
         <aside className="h-fit rounded-lg border border-border bg-card p-6">
           <h2 className="font-serif text-xl">{t("cart.summary")}</h2>
           <dl className="mt-4 space-y-2 text-sm">
-            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.subtotal")}</dt><dd>${total.toFixed(2)}</dd></div>
-            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.shipping")}</dt><dd>{shipping === 0 ? t("cart.free") : `$${shipping.toFixed(2)}`}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.subtotal")}</dt><dd>SAR {total.toFixed(2)}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.shipping")}</dt><dd>{shipping === 0 ? t("cart.free") : `SAR ${shipping.toFixed(2)}`}</dd></div>
             <div className="mt-3 flex justify-between border-t border-border pt-3 text-base font-medium">
-              <dt>{t("cart.total")}</dt><dd className="text-primary">${(total + shipping).toFixed(2)}</dd>
+              <dt>{t("cart.total")}</dt><dd className="text-primary">SAR {(total + shipping).toFixed(2)}</dd>
             </div>
           </dl>
           <Link

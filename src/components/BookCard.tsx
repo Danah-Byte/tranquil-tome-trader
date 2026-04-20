@@ -25,11 +25,7 @@ export function BookCard({ book }: { book: Book }) {
           <h3 className="truncate font-serif text-base font-medium leading-tight">{book.title[lang]}</h3>
           <p className="truncate text-xs text-muted-foreground">{book.author[lang]}</p>
         </div>
-        <span className="shrink-0 text-sm font-medium text-primary">
-          {book.id === "3" ? `SAR ${book.price}` : 
-           book.id === "1" ? `\u200B${book.price} SAR` : 
-           `${book.price} SAR`}
-        </span>
+        <span className="shrink-0 text-sm font-medium text-primary">SAR {book.price}</span>
       </div>
     </Link>
   );

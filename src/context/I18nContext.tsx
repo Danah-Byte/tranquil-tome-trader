@@ -111,6 +111,17 @@ const dict: Dict = {
   "auth.return": { en: "Return home", ar: "العودة إلى الرئيسية" },
   "auth.toggle.toSignup": { en: "New here?", ar: "جديد هنا؟" },
   "auth.toggle.toSignin": { en: "Already have an account?", ar: "لديك حساب بالفعل؟" },
+  "auth.admin.title": { en: "Admin sign in", ar: "تسجيل دخول الإدارة" },
+  "auth.admin.sub": { en: "This area is restricted to the shop manager.", ar: "هذه المنطقة مخصّصة لمدير المتجر فقط." },
+  "auth.admin.username": { en: "Username", ar: "اسم المستخدم" },
+  "auth.admin.password": { en: "Password", ar: "كلمة المرور" },
+  "auth.admin.cta": { en: "Sign in to dashboard", ar: "الدخول إلى لوحة التحكم" },
+  "auth.admin.error": { en: "Invalid username or password.", ar: "اسم المستخدم أو كلمة المرور غير صحيحة." },
+  "auth.admin.hint": { en: "Demo credentials: admin / tranquil2025", ar: "بيانات تجريبية: admin / tranquil2025" },
+  "auth.admin.logout": { en: "Sign out", ar: "تسجيل الخروج" },
+  "admin.guard.title": { en: "Admin access required", ar: "يلزم وصول الإدارة" },
+  "admin.guard.sub": { en: "Please sign in with manager credentials to continue.", ar: "الرجاء تسجيل الدخول ببيانات المدير للمتابعة." },
+  "admin.guard.cta": { en: "Go to admin sign in", ar: "الذهاب إلى تسجيل دخول الإدارة" },
 
   // Admin
   "admin.eyebrow": { en: "Internal", ar: "داخلي" },

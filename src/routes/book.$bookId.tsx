@@ -45,7 +45,7 @@ function BookDetail() {
           <p className="text-xs uppercase tracking-[0.25em] text-accent">{t(`cat.${book.category}` as const)}</p>
           <h1 className="mt-2 font-serif text-4xl md:text-5xl">{book.title[lang]}</h1>
           <p className="mt-2 text-muted-foreground">{t("book.by")} {book.author[lang]}</p>
-          <p className="mt-6 text-3xl font-medium text-primary">${book.price.toFixed(2)}</p>
+          <p className="mt-6 text-3xl font-medium text-primary">SAR {book.price}</p>
           <p className="mt-6 leading-relaxed text-foreground/85">{book.description[lang]}</p>
 
           <button

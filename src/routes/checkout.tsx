@@ -16,7 +16,7 @@ function Checkout() {
   const [method, setMethod] = useState<"mada" | "applepay" | "card">("mada");
   const [done, setDone] = useState(false);
 
-  const shipping = total > 50 ? 0 : 4.5;
+  const shipping = total > 200 ? 0 : 25;
 
   if (done) {
     return (
