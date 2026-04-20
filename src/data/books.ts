@@ -1,16 +1,31 @@
-import book1 from "@/assets/book-1.jpg";
-import book2 from "@/assets/book-2.jpg";
-import book3 from "@/assets/book-3.jpg";
-import book4 from "@/assets/book-4.jpg";
-import book5 from "@/assets/book-5.jpg";
-import book6 from "@/assets/book-6.jpg";
-import book7 from "@/assets/book-7.jpg";
-import book8 from "@/assets/book-8.jpg";
-import book9 from "@/assets/book-9.jpg";
-import book10 from "@/assets/book-10.jpg";
+import r1 from "@/assets/book-r1.jpg";
+import r2 from "@/assets/book-r2.jpg";
+import r3 from "@/assets/book-r3.jpg";
+import r4 from "@/assets/book-r4.jpg";
+import r5 from "@/assets/book-r5.jpg";
+import h1 from "@/assets/book-h1.jpg";
+import h2 from "@/assets/book-h2.jpg";
+import h3 from "@/assets/book-h3.jpg";
+import h4 from "@/assets/book-h4.jpg";
+import h5 from "@/assets/book-h5.jpg";
+import h6 from "@/assets/book-h6.jpg";
+import h7 from "@/assets/book-h7.jpg";
+import h8 from "@/assets/book-h8.jpg";
+import n1 from "@/assets/book-n1.jpg";
+import n2 from "@/assets/book-n2.jpg";
+import n3 from "@/assets/book-n3.jpg";
+import n4 from "@/assets/book-n4.jpg";
+import n5 from "@/assets/book-n5.jpg";
+import n6 from "@/assets/book-n6.jpg";
+import n7 from "@/assets/book-n7.jpg";
+import n8 from "@/assets/book-n8.jpg";
+import n9 from "@/assets/book-n9.jpg";
+import n10 from "@/assets/book-n10.jpg";
+import n11 from "@/assets/book-n11.jpg";
+import n12 from "@/assets/book-n12.jpg";
 import type { Lang } from "@/context/I18nContext";
 
-export type Category = "Fiction" | "Science" | "History";
+export type Category = "Religious" | "History" | "Novels";
 
 export type Bilingual = { en: string; ar: string };
 
@@ -25,130 +40,319 @@ export type Book = {
 };
 
 export const books: Book[] = [
+  // ── Religious (Tafsir, Seerah, Fiqh) ──────────────────────────────
   {
     id: "1",
-    title: { en: "Season of Migration to the North", ar: "موسم الهجرة إلى الشمال" },
-    author: { en: "Tayeb Salih", ar: "الطيّب صالح" },
+    title: { en: "Tafsir Ibn Kathir (Abridged)", ar: "تفسير ابن كثير (مختصر)" },
+    author: { en: "Ibn Kathir", ar: "ابن كثير" },
     description: {
-      en: "A landmark of modern Arabic literature — the haunting story of a Sudanese man returning home from years in Europe.",
-      ar: "تحفة الأدب العربي الحديث — حكاية موجِعة لرجل سوداني عائد إلى وطنه بعد سنوات في أوروبا.",
+      en: "A foundational classical exegesis of the Qur'an — verse by verse, drawing on hadith, the companions, and early scholars.",
+      ar: "تفسير كلاسيكي تأسيسي للقرآن الكريم — آية آية، يستند إلى الحديث وأقوال الصحابة والسلف.",
     },
-    price: 35,
-    category: "Fiction",
-    cover: book7,
+    price: 95,
+    category: "Religious",
+    cover: r1,
   },
   {
     id: "2",
-    title: { en: "The Prophet", ar: "النبي" },
-    author: { en: "Khalil Gibran", ar: "جبران خليل جبران" },
+    title: { en: "Ar-Raheeq Al-Makhtum (The Sealed Nectar)", ar: "الرحيق المختوم" },
+    author: { en: "Safi-ur-Rahman al-Mubarakpuri", ar: "صفي الرحمن المباركفوري" },
     description: {
-      en: "Twenty-six prose poems on love, work, joy, and sorrow — a quiet companion for a lifetime.",
-      ar: "ست وعشرون قصيدة نثرية عن الحب والعمل والفرح والحزن — رفيق هادئ مدى الحياة.",
+      en: "An award-winning biography of the Prophet ﷺ — the definitive modern Seerah for the general reader.",
+      ar: "سيرة نبوية حائزة على جائزة — المرجع الحديث الأشهر في السيرة للقارئ العام.",
     },
-    price: 29,
-    category: "Fiction",
-    cover: book8,
+    price: 65,
+    category: "Religious",
+    cover: r2,
   },
   {
     id: "3",
-    title: { en: "The Quiet Garden", ar: "الحديقة الهادئة" },
-    author: { en: "Elena Marsh", ar: "إيلينا مارش" },
+    title: { en: "Fiqh As-Sunnah", ar: "فقه السنة" },
+    author: { en: "Sayyid Sabiq", ar: "السيد سابق" },
     description: {
-      en: "A tender novel about solitude, memory, and the slow rhythm of a garden tended through four seasons.",
-      ar: "رواية رقيقة عن العزلة والذاكرة وإيقاع حديقة تُعتنى بها على مدار الفصول الأربعة.",
+      en: "A clear, evidence-based presentation of Islamic jurisprudence — purification, prayer, zakah, fasting, and beyond.",
+      ar: "عرض واضح ومُسنَد لأحكام الفقه الإسلامي — الطهارة والصلاة والزكاة والصيام وما بعدها.",
     },
-    price: 29,
-    category: "Fiction",
-    cover: book1,
+    price: 78,
+    category: "Religious",
+    cover: r3,
   },
   {
     id: "4",
-    title: { en: "Letters to the Sea", ar: "رسائل إلى البحر" },
-    author: { en: "Marin Holloway", ar: "مارين هولواي" },
+    title: { en: "Riyad as-Salihin (Gardens of the Righteous)", ar: "رياض الصالحين" },
+    author: { en: "Imam An-Nawawi", ar: "الإمام النووي" },
     description: {
-      en: "A quiet epistolary novel of a lighthouse keeper writing to the tides about love and loss.",
-      ar: "رواية رسائل هادئة لحارس منارة يكتب إلى الأمواج عن الحب والفقد.",
+      en: "A timeless collection of authentic hadith on character, worship, and daily Muslim life.",
+      ar: "مجموعة خالدة من الأحاديث الصحيحة في الأخلاق والعبادة وحياة المسلم اليومية.",
     },
-    price: 25,
-    category: "Fiction",
-    cover: book4,
+    price: 55,
+    category: "Religious",
+    cover: r4,
   },
   {
     id: "5",
-    title: { en: "A Brief History of Time", ar: "تاريخ موجز للزمن" },
-    author: { en: "Stephen Hawking", ar: "ستيفن هوكينغ" },
+    title: { en: "In the Shade of the Qur'an", ar: "في ظلال القرآن" },
+    author: { en: "Sayyid Qutb", ar: "سيد قطب" },
     description: {
-      en: "A landmark introduction to the universe, from the Big Bang to black holes — written for the curious reader.",
-      ar: "مدخل بارز إلى الكون، من الانفجار العظيم إلى الثقوب السوداء — مكتوب للقارئ الفضولي.",
+      en: "A literary, reflective tafsir that walks through the Qur'an as a living guide for the soul and society.",
+      ar: "تفسير أدبي تأمّلي يسير مع القرآن بوصفه هاديًا حيًّا للروح والمجتمع.",
     },
-    price: 26.0,
-    category: "Science",
-    cover: book9,
+    price: 110,
+    category: "Religious",
+    cover: r5,
   },
+
+  // ── History (Andalus, Abbasid, Ancient Egypt) ─────────────────────
   {
     id: "6",
-    title: { en: "Cosmic Whispers", ar: "همسات كونية" },
-    author: { en: "Dr. Idris Khan", ar: "د. إدريس خان" },
+    title: { en: "Andalusia: History of the Lost Paradise", ar: "الأندلس: تاريخ الفردوس المفقود" },
+    author: { en: "Raghib al-Sirjani", ar: "راغب السرجاني" },
     description: {
-      en: "An accessible journey through modern cosmology — from the cosmic microwave background to the edge of the observable universe.",
-      ar: "رحلة ميسّرة في علم الكونيات الحديث — من إشعاع الخلفية الكونية إلى حافة الكون المرئي.",
+      en: "Eight centuries of Muslim Spain — from the conquest to the fall of Granada — told with rigour and feeling.",
+      ar: "ثمانية قرون من الأندلس الإسلامية — من الفتح إلى سقوط غرناطة — بسرد دقيق وعاطفة صادقة.",
     },
-    price: 24.0,
-    category: "Science",
-    cover: book2,
+    price: 72,
+    category: "History",
+    cover: h1,
   },
   {
     id: "7",
-    title: { en: "The Mind Unfolded", ar: "العقل المنبسط" },
-    author: { en: "Prof. Nora Bell", ar: "أ. نورة بل" },
+    title: { en: "The Abbasid Caliphate", ar: "الدولة العباسية" },
+    author: { en: "Muhammad Suhail Taqush", ar: "محمد سهيل طقّوش" },
     description: {
-      en: "How neuroscience is rewriting our understanding of attention, memory, and what it means to be present.",
-      ar: "كيف يعيد علم الأعصاب رسم فهمنا للانتباه والذاكرة ومعنى الحضور.",
+      en: "The rise, golden age, and decline of the Abbasid state — politics, society, and the great translation movement.",
+      ar: "نشأة الدولة العباسية وعصرها الذهبي وأفولها — السياسة والمجتمع وحركة الترجمة الكبرى.",
     },
-    price: 27.5,
-    category: "Science",
-    cover: book5,
+    price: 68,
+    category: "History",
+    cover: h2,
   },
   {
     id: "8",
-    title: { en: "The Silk Roads", ar: "طرق الحرير" },
-    author: { en: "Peter Frankopan", ar: "بيتر فرانكوبان" },
+    title: { en: "Cordoba: Capital of the World", ar: "قرطبة: عاصمة العالم" },
+    author: { en: "Hassan Al-Wazzan", ar: "حسن الوزّان" },
     description: {
-      en: "A new history of the world told through the trade routes that bound east and west together for millennia.",
-      ar: "تاريخ جديد للعالم يُروى عبر طرق التجارة التي ربطت الشرق بالغرب لآلاف السنين.",
+      en: "A vivid portrait of 10th-century Cordoba — libraries, mosques, scholars, and the streets of a great Andalusian city.",
+      ar: "صورة نابضة لقرطبة في القرن العاشر — المكتبات والمساجد والعلماء وأزقّة المدينة الأندلسية الكبرى.",
     },
-    price: 28.0,
+    price: 60,
     category: "History",
-    cover: book10,
+    cover: h3,
   },
   {
     id: "9",
-    title: { en: "Ancient Echoes", ar: "أصداء قديمة" },
-    author: { en: "Yara Al-Sayed", ar: "يارا السيّد" },
+    title: { en: "Harun al-Rashid", ar: "هارون الرشيد" },
+    author: { en: "Shawqi Abu Khalil", ar: "شوقي أبو خليل" },
     description: {
-      en: "A sweeping account of forgotten empires whose ideas still shape the modern world.",
-      ar: "سرد واسع لإمبراطوريات منسيّة لا تزال أفكارها تُشكّل العالم الحديث.",
+      en: "A biography of the most famous Abbasid caliph — diplomat, patron of scholars, and figure of legend.",
+      ar: "سيرة أشهر الخلفاء العباسيين — الدبلوماسي وراعي العلماء وصاحب الحكايات الخالدة.",
     },
-    price: 22.0,
+    price: 48,
     category: "History",
-    cover: book3,
+    cover: h4,
   },
   {
     id: "10",
-    title: { en: "Empires of Sand", ar: "ممالك الرمال" },
+    title: { en: "Pharaonic Egypt", ar: "مصر الفرعونية" },
+    author: { en: "Selim Hassan", ar: "سليم حسن" },
+    description: {
+      en: "From the Old Kingdom to the New — gods, dynasties, and daily life along the Nile, by Egypt's pioneering Egyptologist.",
+      ar: "من الدولة القديمة إلى الحديثة — الآلهة والأسر والحياة اليومية على ضفاف النيل، بقلم رائد علم المصريات.",
+    },
+    price: 85,
+    category: "History",
+    cover: h5,
+  },
+  {
+    id: "11",
+    title: { en: "Tutankhamun", ar: "توت عنخ آمون" },
+    author: { en: "Zahi Hawass", ar: "زاهي حواس" },
+    description: {
+      en: "The boy king's life, death, and the discovery of his tomb — a hundred years on.",
+      ar: "حياة الملك الصبي وموته واكتشاف مقبرته — بعد مئة عام على الكشف.",
+    },
+    price: 70,
+    category: "History",
+    cover: h6,
+  },
+  {
+    id: "12",
+    title: { en: "Cleopatra: The Last Queen", ar: "كليوباترا: آخر ملكات مصر" },
+    author: { en: "Hussein Fawzi", ar: "حسين فوزي" },
+    description: {
+      en: "A nuanced portrait of Egypt's most famous queen, beyond the Roman myth.",
+      ar: "صورة دقيقة لأشهر ملكات مصر، بعيدًا عن الأسطورة الرومانية.",
+    },
+    price: 52,
+    category: "History",
+    cover: h7,
+  },
+  {
+    id: "13",
+    title: { en: "Saladin Al-Ayyubi", ar: "صلاح الدين الأيوبي" },
+    author: { en: "Abdullah Allan", ar: "عبد الله علاّن" },
+    description: {
+      en: "The unifier of the Muslim east, the liberator of Jerusalem — a leader of faith, strategy, and mercy.",
+      ar: "موحّد المشرق الإسلامي ومحرّر القدس — قائد جمع الإيمان والاستراتيجية والرحمة.",
+    },
+    price: 64,
+    category: "History",
+    cover: h8,
+  },
+
+  // ── Novels (Fantasy & Sci-Fi only) ────────────────────────────────
+  {
+    id: "14",
+    title: { en: "Sword of the Desert", ar: "سيف الصحراء" },
+    author: { en: "Yara Al-Sayed", ar: "يارا السيّد" },
+    description: {
+      en: "A young Bedouin girl uncovers a sword that whispers to the wind — and to the empires that hunt for it.",
+      ar: "فتاة بدوية تكتشف سيفًا يهمس للريح — وللإمبراطوريات التي تطارده.",
+    },
+    price: 45,
+    category: "Novels",
+    cover: n1,
+  },
+  {
+    id: "15",
+    title: { en: "City of Mars", ar: "مدينة المريخ" },
+    author: { en: "Idris Khan", ar: "إدريس خان" },
+    description: {
+      en: "On the first Arab Martian colony, a domed city begins to dream — and someone is listening.",
+      ar: "على أول مستعمرة عربية في المريخ، تبدأ مدينة مقبّبة في الحلم — وهناك من يُصغي.",
+    },
+    price: 49,
+    category: "Novels",
+    cover: n2,
+  },
+  {
+    id: "16",
+    title: { en: "Jinn of the Sands", ar: "جن الرمال" },
     author: { en: "Hassan Rahimi", ar: "حسن رحيمي" },
     description: {
-      en: "A vivid history of the great desert civilizations and the trade routes that connected them.",
-      ar: "تاريخ نابض بالحياة للحضارات الصحراوية الكبرى وطرق التجارة التي جمعت بينها.",
+      en: "A caravan vanishes in the Empty Quarter. A scholar of the unseen sets out to find what took it.",
+      ar: "قافلة تختفي في الربع الخالي، فيخرج عالم بالغيب باحثًا عمّا ابتلعها.",
     },
-    price: 20.0,
-    category: "History",
-    cover: book6,
+    price: 42,
+    category: "Novels",
+    cover: n3,
+  },
+  {
+    id: "17",
+    title: { en: "The Last of the Algorithmists", ar: "آخر الخوارزميين" },
+    author: { en: "Marin Holloway", ar: "مارين هولواي" },
+    description: {
+      en: "In a Riyadh of 2087, a renegade engineer hides the last unmonitored algorithm in the world.",
+      ar: "في رياض عام 2087، يُخفي مهندس متمرّد آخر خوارزمية غير مراقَبة في العالم.",
+    },
+    price: 47,
+    category: "Novels",
+    cover: n4,
+  },
+  {
+    id: "18",
+    title: { en: "Dragon of the Peninsula", ar: "تنين الجزيرة" },
+    author: { en: "Tariq Al-Ahmar", ar: "طارق الأحمر" },
+    description: {
+      en: "An epic of dragons, towers, and a forgotten kingdom buried beneath the sands of Arabia.",
+      ar: "ملحمة عن التنانين والأبراج ومملكة منسيّة مدفونة تحت رمال الجزيرة.",
+    },
+    price: 55,
+    category: "Novels",
+    cover: n5,
+  },
+  {
+    id: "19",
+    title: { en: "Stars of Najd", ar: "نجوم نجد" },
+    author: { en: "Nora Bell", ar: "نورة بل" },
+    description: {
+      en: "An astronaut from Najd is the first to cross the heliopause — and the first to hear what's on the other side.",
+      ar: "رائدة فضاء من نجد هي أول من يعبر حدود الشمس — وأول من يسمع ما خلفها.",
+    },
+    price: 46,
+    category: "Novels",
+    cover: n6,
+  },
+  {
+    id: "20",
+    title: { en: "The Sorceress of Baghdad", ar: "ساحرة بغداد" },
+    author: { en: "Layla Al-Hashimi", ar: "ليلى الهاشمي" },
+    description: {
+      en: "In the city of a thousand lanterns, a young sorceress must choose between her gift and her caliph.",
+      ar: "في مدينة الألف فانوس، على ساحرة شابة أن تختار بين موهبتها وخليفتها.",
+    },
+    price: 50,
+    category: "Novels",
+    cover: n7,
+  },
+  {
+    id: "21",
+    title: { en: "The Time Gate", ar: "بوابة الزمن" },
+    author: { en: "Faisal Al-Otaibi", ar: "فيصل العتيبي" },
+    description: {
+      en: "An archaeologist in AlUla finds a portal that opens once every thousand years. It opens tonight.",
+      ar: "عالم آثار في العُلا يكتشف بوابة تُفتح مرّة كلّ ألف عام. وهي تُفتح الليلة.",
+    },
+    price: 44,
+    category: "Novels",
+    cover: n8,
+  },
+  {
+    id: "22",
+    title: { en: "Throne of the Phoenix", ar: "عرش العنقاء" },
+    author: { en: "Mariam Al-Qahtani", ar: "مريم القحطاني" },
+    description: {
+      en: "A princess in exile must reclaim a desert throne guarded by a phoenix that no one has seen for three hundred years.",
+      ar: "أميرة في المنفى عليها استعادة عرش صحراوي تحرسه عنقاء لم يرها أحد منذ ثلاثمئة عام.",
+    },
+    price: 53,
+    category: "Novels",
+    cover: n9,
+  },
+  {
+    id: "23",
+    title: { en: "Neon Desert", ar: "صحراء النيون" },
+    author: { en: "Omar Khalifa", ar: "عمر خليفة" },
+    description: {
+      en: "A street racer in a cyberpunk Riyadh is hired for one last run — across the dunes, into the data storms.",
+      ar: "متسابق شوارع في رياض السايبربانك يُستأجر لسباق أخير — عبر الكثبان وإلى عواصف البيانات.",
+    },
+    price: 48,
+    category: "Novels",
+    cover: n10,
+  },
+  {
+    id: "24",
+    title: { en: "Kingdom of Glass", ar: "مملكة الزجاج" },
+    author: { en: "Reem Al-Ansari", ar: "ريم الأنصاري" },
+    description: {
+      en: "A floating city of crystal hides a queen, a curse, and a war that began before the first sunrise.",
+      ar: "مدينة طافية من البلّور تُخفي ملكة ولعنة وحربًا بدأت قبل أول شروق.",
+    },
+    price: 51,
+    category: "Novels",
+    cover: n11,
+  },
+  {
+    id: "25",
+    title: { en: "Ibn Sina 2099", ar: "ابن سينا 2099" },
+    author: { en: "Yousef Al-Mansour", ar: "يوسف المنصور" },
+    description: {
+      en: "A bio-engineer downloads the consciousness of Ibn Sina to cure a plague — and inherits more than knowledge.",
+      ar: "مهندسة حيوية تُنزّل وعي ابن سينا لعلاج وباء — فترث أكثر من المعرفة.",
+    },
+    price: 49,
+    category: "Novels",
+    cover: n12,
   },
 ];
 
-export const categories: Category[] = ["Fiction", "Science", "History"];
+export const categories: Category[] = ["Religious", "History", "Novels"];
 
 export function pickLang<T>(b: { en: T; ar: T }, lang: Lang): T {
   return b[lang];
+}
+
+export function formatPrice(price: number): string {
+  return `SAR ${price}`;
 }
