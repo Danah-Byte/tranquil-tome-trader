@@ -14,15 +14,15 @@ import h8 from "@/assets/book-h8-new.jpg";
 import n1 from "@/assets/book-n1.webp";
 import n2 from "@/assets/book-n2.webp";
 import n3 from "@/assets/book-n3.webp";
-import n4 from "@/assets/book-n4.jpg";
+import n4 from "@/assets/book-n4-new.webp";
 import n5 from "@/assets/book-n5.webp";
-import n6 from "@/assets/book-n6.jpg";
-import n7 from "@/assets/book-n7.jpg";
-import n8 from "@/assets/book-n8.jpg";
-import n9 from "@/assets/book-n9.jpg";
-import n10 from "@/assets/book-n10.jpg";
-import n11 from "@/assets/book-n11.jpg";
-import n12 from "@/assets/book-n12.jpg";
+import n6 from "@/assets/book-n6-new.webp";
+import n7 from "@/assets/book-n7-new.webp";
+import n8 from "@/assets/book-n8-new.webp";
+import n9 from "@/assets/book-n9-new.webp";
+import n10 from "@/assets/book-n10-new.webp";
+import n11 from "@/assets/book-n11-new.webp";
+import n12 from "@/assets/book-n12-new.webp";
 import type { Lang } from "@/context/I18nContext";
 
 export type Category = "Religious" | "History" | "Novels";
@@ -275,11 +275,11 @@ export const books: Book[] = [
   },
   {
     id: "20",
-    title: { en: "The Sorceress of Baghdad", ar: "ساحرة بغداد" },
-    author: { en: "Layla Al-Hashimi", ar: "ليلى الهاشمي" },
+    title: { en: "To Calm My Heart", ar: "ليطمئن قلبي" },
+    author: { en: "Adham Sharqawi", ar: "ادهم شرقاوي" },
     description: {
-      en: "In the city of a thousand lanterns, a young sorceress must choose between her gift and her caliph.",
-      ar: "في مدينة الألف فانوس، على ساحرة شابة أن تختار بين موهبتها وخليفتها.",
+      en: "In the city of a thousand lanterns, a journey to find peace of mind and soul.",
+      ar: "في مدينة الألف فانوس، رحلة للبحث عن طمأنينة القلب والروح.",
     },
     price: 50,
     category: "Novels",
@@ -287,11 +287,11 @@ export const books: Book[] = [
   },
   {
     id: "21",
-    title: { en: "The Time Gate", ar: "بوابة الزمن" },
-    author: { en: "Faisal Al-Otaibi", ar: "فيصل العتيبي" },
+    title: { en: "And Then There Were None", ar: "وأختفى كل شي" },
+    author: { en: "Agatha Christie", ar: "اجاثا كريستي" },
     description: {
-      en: "An archaeologist in AlUla finds a portal that opens once every thousand years. It opens tonight.",
-      ar: "عالم آثار في العُلا يكتشف بوابة تُفتح مرّة كلّ ألف عام. وهي تُفتح الليلة.",
+      en: "Ten strangers are invited to an isolated island, where they are killed one by one.",
+      ar: "عشرة غرباء يُدعون إلى جزيرة معزولة، حيث يُقتلون واحدًا تلو الآخر.",
     },
     price: 44,
     category: "Novels",
@@ -299,11 +299,11 @@ export const books: Book[] = [
   },
   {
     id: "22",
-    title: { en: "Throne of the Phoenix", ar: "عرش العنقاء" },
-    author: { en: "Mariam Al-Qahtani", ar: "مريم القحطاني" },
+    title: { en: "Eyes of a Blue Bird", ar: "عينا طائر ازرق" },
+    author: { en: "Abdulrazzaq Saleh", ar: "عبدالرزاق صالح" },
     description: {
-      en: "A princess in exile must reclaim a desert throne guarded by a phoenix that no one has seen for three hundred years.",
-      ar: "أميرة في المنفى عليها استعادة عرش صحراوي تحرسه عنقاء لم يرها أحد منذ ثلاثمئة عام.",
+      en: "A story of mystery and wonder set in the heart of the desert.",
+      ar: "قصة من الغموض والعجائب تدور أحداثها في قلب الصحراء.",
     },
     price: 53,
     category: "Novels",
@@ -311,7 +311,7 @@ export const books: Book[] = [
   },
   {
     id: "23",
-    title: { en: "Neon Desert", ar: "صحراء النيون" },
+    title: { en: "Star Desert", ar: "صحراء النجوم" },
     author: { en: "Omar Khalifa", ar: "عمر خليفة" },
     description: {
       en: "A street racer in a cyberpunk Riyadh is hired for one last run — across the dunes, into the data storms.",
