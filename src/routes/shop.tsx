@@ -9,7 +9,7 @@ type ShopSearch = { q?: string; category?: Category };
 export const Route = createFileRoute("/shop")({
   validateSearch: (s: Record<string, unknown>): ShopSearch => ({
     q: typeof s.q === "string" ? s.q : undefined,
-    category: ["Fiction", "Science", "History"].includes(s.category as string)
+    category: ["Religious", "History", "Novels"].includes(s.category as string)
       ? (s.category as Category)
       : undefined,
   }),

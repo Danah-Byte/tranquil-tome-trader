@@ -99,22 +99,22 @@ function Checkout() {
             {items.map(({ book, qty }) => (
               <li key={book.id} className="flex justify-between gap-3">
                 <span className="text-foreground/85">{book.title[lang]} <span className="text-muted-foreground">× {qty}</span></span>
-                <span>${(book.price * qty).toFixed(2)}</span>
+                <span>SAR {(book.price * qty).toFixed(2)}</span>
               </li>
             ))}
           </ul>
           <dl className="mt-5 space-y-2 border-t border-border pt-4 text-sm">
-            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.subtotal")}</dt><dd>${total.toFixed(2)}</dd></div>
-            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.shipping")}</dt><dd>{shipping === 0 ? t("cart.free") : `$${shipping.toFixed(2)}`}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.subtotal")}</dt><dd>SAR {total.toFixed(2)}</dd></div>
+            <div className="flex justify-between"><dt className="text-muted-foreground">{t("cart.shipping")}</dt><dd>{shipping === 0 ? t("cart.free") : `SAR ${shipping.toFixed(2)}`}</dd></div>
             <div className="mt-2 flex justify-between border-t border-border pt-3 text-base font-medium">
-              <dt>{t("cart.total")}</dt><dd className="text-primary">${(total + shipping).toFixed(2)}</dd>
+              <dt>{t("cart.total")}</dt><dd className="text-primary">SAR {(total + shipping).toFixed(2)}</dd>
             </div>
           </dl>
           <button
             type="submit"
             className="mt-6 inline-flex h-11 w-full items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
-            {t("checkout.pay")} ${(total + shipping).toFixed(2)}
+            {t("checkout.pay")} SAR {(total + shipping).toFixed(2)}
           </button>
         </aside>
       </form>
