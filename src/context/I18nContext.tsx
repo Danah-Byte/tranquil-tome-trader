@@ -17,8 +17,8 @@ const dict: Dict = {
   "home.eyebrow": { en: "A quiet bookshop", ar: "مكتبة هادئة" },
   "home.title": { en: "Books worth slowing down for.", ar: "قصص تستحق أن تُقرأ على مهل." },
   "home.subtitle": {
-    en: "Hand-picked fiction, science, and history — wrapped, signed, and posted from a small shop in Skaka.",
-    ar: "روايات وعلوم وتاريخ مختارة بعناية — تُغلَّف وتُوقَّع وتُرسَل من مكتبة صغيرة في سكاكا.",
+    en: "Hand-picked Religious works, History, and Arabic Fantasy & Sci-Fi novels — wrapped, signed, and posted from a small shop in Sakaka.",
+    ar: "كتب دينية وتاريخية وروايات عربية في الفانتازيا والخيال العلمي مختارة بعناية — تُغلَّف وتُوقَّع وتُرسَل من مكتبة صغيرة في سكاكا.",
   },
   "home.search.placeholder": { en: "Search titles or authors…", ar: "ابحث عن عنوان أو مؤلف…" },
   "home.search.button": { en: "Search", ar: "بحث" },
@@ -29,12 +29,12 @@ const dict: Dict = {
   "home.featured.title": { en: "From the shelf", ar: "من الرفوف" },
 
   // Categories
-  "cat.Fiction": { en: "Fiction", ar: "روايات" },
-  "cat.Science": { en: "Science", ar: "علوم" },
+  "cat.Religious": { en: "Religious", ar: "إسلاميات" },
   "cat.History": { en: "History", ar: "تاريخ" },
-  "cat.Fiction.blurb": { en: "Stories that linger long after the last page.", ar: "حكايات تبقى معك بعد الصفحة الأخيرة." },
-  "cat.Science.blurb": { en: "Curiosity, carefully measured.", ar: "فضول مُقاس بعناية." },
-  "cat.History.blurb": { en: "The past, gently retold.", ar: "الماضي يُروى برفق." },
+  "cat.Novels": { en: "Novels", ar: "روايات" },
+  "cat.Religious.blurb": { en: "Tafsir, Seerah, and Fiqh — for the seeker.", ar: "تفسير وسيرة وفقه — لطالب الهداية." },
+  "cat.History.blurb": { en: "Andalus, Abbasid, and Ancient Egypt.", ar: "الأندلس والعباسيون ومصر القديمة." },
+  "cat.Novels.blurb": { en: "Arabic fantasy and science fiction.", ar: "فانتازيا وخيال علمي عربي." },
 
   // Shop
   "shop.title": { en: "The Catalog", ar: "الفهرس" },
@@ -111,6 +111,17 @@ const dict: Dict = {
   "auth.return": { en: "Return home", ar: "العودة إلى الرئيسية" },
   "auth.toggle.toSignup": { en: "New here?", ar: "جديد هنا؟" },
   "auth.toggle.toSignin": { en: "Already have an account?", ar: "لديك حساب بالفعل؟" },
+  "auth.admin.title": { en: "Admin sign in", ar: "تسجيل دخول الإدارة" },
+  "auth.admin.sub": { en: "This area is restricted to the shop manager.", ar: "هذه المنطقة مخصّصة لمدير المتجر فقط." },
+  "auth.admin.username": { en: "Username", ar: "اسم المستخدم" },
+  "auth.admin.password": { en: "Password", ar: "كلمة المرور" },
+  "auth.admin.cta": { en: "Sign in to dashboard", ar: "الدخول إلى لوحة التحكم" },
+  "auth.admin.error": { en: "Invalid username or password.", ar: "اسم المستخدم أو كلمة المرور غير صحيحة." },
+  "auth.admin.hint": { en: "Demo credentials: admin / tranquil2025", ar: "بيانات تجريبية: admin / tranquil2025" },
+  "auth.admin.logout": { en: "Sign out", ar: "تسجيل الخروج" },
+  "admin.guard.title": { en: "Admin access required", ar: "يلزم وصول الإدارة" },
+  "admin.guard.sub": { en: "Please sign in with manager credentials to continue.", ar: "الرجاء تسجيل الدخول ببيانات المدير للمتابعة." },
+  "admin.guard.cta": { en: "Go to admin sign in", ar: "الذهاب إلى تسجيل دخول الإدارة" },
 
   // Admin
   "admin.eyebrow": { en: "Internal", ar: "داخلي" },
@@ -152,7 +163,7 @@ const dict: Dict = {
   },
   "footer.visit": { en: "Visit", ar: "زرنا" },
   "footer.contact": { en: "Contact", ar: "تواصل" },
-  "footer.address": { en: "Skaka , KSA", ar: "سكاكا، المملكة العربية السعودية" },
+  "footer.address": { en: "Sakaka, KSA", ar: "سكاكا، المملكة العربية السعودية" },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
 
   // 404

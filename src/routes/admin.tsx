@@ -1,23 +1,35 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { useState } from "react";
-import { Pencil, Trash2, Plus, Package } from "lucide-react";
+import { Pencil, Trash2, Plus, Package, LogOut, ShieldCheck } from "lucide-react";
 import { books as seedBooks, type Book, type Category } from "@/data/books";
 import { useI18n } from "@/context/I18nContext";
+import { useAuth } from "@/context/AuthContext";
 
 export const Route = createFileRoute("/admin")({
+  beforeLoad: () => {
+    // Guard: redirect to /login if not signed in as admin.
+    // Reads the same localStorage key the AuthProvider uses.
+    if (typeof window !== "undefined") {
+      const isAdmin = window.localStorage.getItem("tranquil_admin_v1") === "1";
+      if (!isAdmin) {
+        throw redirect({ to: "/login", search: { redirect: "/admin" } });
+      }
+    }
+  },
   component: Admin,
   head: () => ({ meta: [{ title: "Admin — Tranquil Pages" }] }),
 });
 
 const mockOrders = [
-  { id: "ORD-1042", customer: { en: "Sara A.", ar: "سارة ع." }, total: 64.5, status: "shipped" as const, date: "2025-04-12" },
-  { id: "ORD-1041", customer: { en: "Omar K.", ar: "عمر ك." }, total: 22.0, status: "processing" as const, date: "2025-04-12" },
-  { id: "ORD-1040", customer: { en: "Lina H.", ar: "لينا هـ." }, total: 41.5, status: "delivered" as const, date: "2025-04-10" },
-  { id: "ORD-1039", customer: { en: "Yusuf M.", ar: "يوسف م." }, total: 18.5, status: "delivered" as const, date: "2025-04-09" },
+  { id: "ORD-1042", customer: { en: "Sara A.", ar: "سارة ع." }, total: 285, status: "shipped" as const, date: "2025-04-12" },
+  { id: "ORD-1041", customer: { en: "Omar K.", ar: "عمر ك." }, total: 110, status: "processing" as const, date: "2025-04-12" },
+  { id: "ORD-1040", customer: { en: "Lina H.", ar: "لينا هـ." }, total: 195, status: "delivered" as const, date: "2025-04-10" },
+  { id: "ORD-1039", customer: { en: "Yusuf M.", ar: "يوسف م." }, total: 78, status: "delivered" as const, date: "2025-04-09" },
 ];
 
 function Admin() {
   const { t, lang } = useI18n();
+  const { logout } = useAuth();
   const [tab, setTab] = useState<"books" | "orders">("books");
   const [items, setItems] = useState<Book[]>(seedBooks);
   const [editing, setEditing] = useState<Book | null>(null);
@@ -27,13 +39,23 @@ function Admin() {
     <div className="mx-auto max-w-6xl px-4 py-12">
       <header className="flex flex-col gap-2 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-accent">{t("admin.eyebrow")}</p>
+          <p className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.25em] text-accent">
+            <ShieldCheck className="h-3.5 w-3.5" /> {t("admin.eyebrow")}
+          </p>
           <h1 className="mt-1 font-serif text-3xl md:text-4xl">{t("admin.title")}</h1>
           <p className="mt-1 text-sm text-muted-foreground">{t("admin.sub")}</p>
         </div>
-        <div className="inline-flex rounded-md border border-border bg-card p-1">
-          <TabBtn active={tab === "books"} onClick={() => setTab("books")}>{t("admin.tab.books")}</TabBtn>
-          <TabBtn active={tab === "orders"} onClick={() => setTab("orders")}>{t("admin.tab.orders")}</TabBtn>
+        <div className="flex items-center gap-2">
+          <div className="inline-flex rounded-md border border-border bg-card p-1">
+            <TabBtn active={tab === "books"} onClick={() => setTab("books")}>{t("admin.tab.books")}</TabBtn>
+            <TabBtn active={tab === "orders"} onClick={() => setTab("orders")}>{t("admin.tab.orders")}</TabBtn>
+          </div>
+          <button
+            onClick={logout}
+            className="inline-flex h-9 items-center gap-1.5 rounded-md border border-border bg-card px-3 text-xs font-medium text-foreground/80 transition-colors hover:bg-secondary"
+          >
+            <LogOut className="h-3.5 w-3.5" /> {t("auth.admin.logout")}
+          </button>
         </div>
       </header>
 
@@ -71,7 +93,7 @@ function Admin() {
                       </div>
                     </td>
                     <td className="p-3">{t(`cat.${b.category}` as const)}</td>
-                    <td className="p-3">${b.price.toFixed(2)}</td>
+                    <td className="p-3">SAR {b.price}</td>
                     <td className="p-3 text-end">
                       <button
                         onClick={() => { setCreating(false); setEditing(b); }}
@@ -128,7 +150,7 @@ function Admin() {
                     </td>
                     <td className="p-3">{o.customer[lang]}</td>
                     <td className="p-3 text-muted-foreground">{o.date}</td>
-                    <td className="p-3">${o.total.toFixed(2)}</td>
+                    <td className="p-3">SAR {o.total.toFixed(2)}</td>
                     <td className="p-3">
                       <span className={`inline-flex rounded-full px-2.5 py-0.5 text-xs ${
                         o.status === "delivered" ? "bg-primary/10 text-primary" :
@@ -143,6 +165,9 @@ function Admin() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-xs text-muted-foreground">
+            <Link to="/" className="underline-offset-4 hover:underline">←</Link> Demo data
+          </p>
         </section>
       )}
     </div>
@@ -173,7 +198,7 @@ function BookForm({
   const [descEn, setDescEn] = useState(initial?.description.en ?? "");
   const [descAr, setDescAr] = useState(initial?.description.ar ?? "");
   const [price, setPrice] = useState(initial?.price ?? 0);
-  const [category, setCategory] = useState<Category>(initial?.category ?? "Fiction");
+  const [category, setCategory] = useState<Category>(initial?.category ?? "Religious");
 
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-foreground/30 p-4 backdrop-blur-sm">
@@ -189,7 +214,7 @@ function BookForm({
               <span className="mb-1 block text-foreground/80">{t("admin.col.price")}</span>
               <input
                 type="number"
-                step="0.5"
+                step="1"
                 value={price}
                 onChange={(e) => setPrice(parseFloat(e.target.value))}
                 className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus:border-primary"
@@ -202,9 +227,9 @@ function BookForm({
                 onChange={(e) => setCategory(e.target.value as Category)}
                 className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus:border-primary"
               >
-                <option value="Fiction">{t("cat.Fiction")}</option>
-                <option value="Science">{t("cat.Science")}</option>
+                <option value="Religious">{t("cat.Religious")}</option>
                 <option value="History">{t("cat.History")}</option>
+                <option value="Novels">{t("cat.Novels")}</option>
               </select>
             </label>
           </div>
