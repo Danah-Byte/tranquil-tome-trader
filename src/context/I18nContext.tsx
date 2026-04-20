@@ -152,7 +152,7 @@ const dict: Dict = {
   },
   "footer.visit": { en: "Visit", ar: "زرنا" },
   "footer.contact": { en: "Contact", ar: "تواصل" },
-  "footer.address": { en: "12 Olive Lane\nRiyadh, KSA", ar: "12 شارع الزيتون\nالرياض، المملكة العربية السعودية" },
+  "footer.address": { en: "Skaka , KSA", ar: "سكاكا، المملكة العربية السعودية" },
   "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
 
   // 404
