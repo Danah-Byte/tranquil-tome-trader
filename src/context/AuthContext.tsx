@@ -11,7 +11,7 @@ const KEY = "tranquil_admin_v1";
 
 // Demo-only credentials — frontend prototype, not real security.
 export const ADMIN_USERNAME = "admin";
-export const ADMIN_PASSWORD = "tranquil2025";
+export const ADMIN_PASSWORD = "tranquil2026";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAdmin, setIsAdmin] = useState(false);
