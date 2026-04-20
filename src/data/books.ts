@@ -3,14 +3,14 @@ import r2 from "@/assets/book-r2.webp";
 import r3 from "@/assets/book-r3.webp";
 import r4 from "@/assets/book-r4.webp";
 import r5 from "@/assets/book-r5.webp";
-import h1 from "@/assets/book-h1.jpg";
-import h2 from "@/assets/book-h2.jpg";
-import h3 from "@/assets/book-h3.jpg";
-import h4 from "@/assets/book-h4.jpg";
-import h5 from "@/assets/book-h5.jpg";
-import h6 from "@/assets/book-h6.jpg";
-import h7 from "@/assets/book-h7.jpg";
-import h8 from "@/assets/book-h8.jpg";
+import h1 from "@/assets/book-h1-new.jpg";
+import h2 from "@/assets/book-h2-new.jpg";
+import h3 from "@/assets/book-h3-new.webp";
+import h4 from "@/assets/book-h4-new.webp";
+import h5 from "@/assets/book-h5-new.webp";
+import h6 from "@/assets/book-h6-new.webp";
+import h7 from "@/assets/book-h7-new.webp";
+import h8 from "@/assets/book-h8-new.jpg";
 import n1 from "@/assets/book-n1.jpg";
 import n2 from "@/assets/book-n2.jpg";
 import n3 from "@/assets/book-n3.jpg";
@@ -153,7 +153,7 @@ export const books: Book[] = [
   },
   {
     id: "10",
-    title: { en: "Pharaonic Egypt", ar: "مصر الفرعونية" },
+    title: { en: "Pharaonic Egypt", ar: "تاريخ مصر" },
     author: { en: "Selim Hassan", ar: "جمال هدية" },
     description: {
       en: "From the Old Kingdom to the New — gods, dynasties, and daily life along the Nile, by Egypt's pioneering Egyptologist.",
@@ -178,7 +178,7 @@ export const books: Book[] = [
   {
     id: "12",
     title: { en: "Cleopatra: The Last Queen", ar: "الحضارة المصرية" },
-    author: { en: "Hussein Fawzi", ar: "حسين فوزي" },
+    author: { en: "Hussein Fawzi", ar: "خزعل الماجدي" },
     description: {
       en: "A nuanced portrait of Egypt's most famous queen, beyond the Roman myth.",
       ar: "صورة دقيقة لأشهر ملكات مصر، بعيدًا عن الأسطورة الرومانية.",
