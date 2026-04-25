@@ -118,3 +118,13 @@
     letter-spacing: -0.01em;
   }
 }
+/* Hidden quality control adjustments */
+#lovable-badge, 
+.lovable-badge, 
+[class*="lovable"], 
+[data-lovable-badge="true"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
