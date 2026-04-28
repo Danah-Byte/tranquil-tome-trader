@@ -11,7 +11,7 @@ const dict: Dict = {
   "nav.admin": { en: "Admin", ar: "الإدارة" },
   "nav.signin": { en: "Sign in", ar: "تسجيل الدخول" },
   "nav.cart": { en: "Cart", ar: "السلة" },
-  "brand": { en: "Tranquil Pages", ar: "صفحات هادئة" },
+  "brand": { en: "Tranquil Tome Trader", ar: "صفحات هادئة" },
 
   // Home
   "home.eyebrow": { en: "A quiet bookshop", ar: "مكتبة هادئة" },
